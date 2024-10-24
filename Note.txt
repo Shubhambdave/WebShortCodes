@@ -6,11 +6,11 @@
   -webkit-box-orient: vertical;  
   overflow: hidden;
 }
-______________________________________________
+______________________________________________________________________________
 when u dont want to link any page on button
 put this instead of blank href  	
 <a href="javascript:void(0)">BTN</a> 
-______________________________________
+______________________________________________________________________________
 
 #center any content
 {
@@ -26,11 +26,10 @@ ______________________________________________________________________________
 #remove enfold bottom name 
 -add this code to functions.php file in bottom 
 ###  add_filter('kriesi_backlink','__return_false'); ###
-________________________________________________
+______________________________________________________________________________
 
  elementor
-________________________________________________
-
+______________________________________________________________________________
 #container 
 -first full width container 
 -take main container
@@ -41,7 +40,7 @@ https://youtu.be/EFpkXMyFReM?feature=shared
 
 #all widget use and full course for elementor 
 https://youtube.com/playlist?list=PL_n5v3BovwmLY1y4nEX6uI2dULa9Uv0Ll&feature=shared
-______________________
+______________________________________________________________________________
 #to break list into two olumn 
 ul {
 column-count-2
@@ -117,7 +116,7 @@ classname.show {
     opacity: 1;
 }
 
-__________________________________________________________
+______________________________________________________________________________
 
 slick slider counter js 
 
@@ -140,7 +139,7 @@ function toggleMenu(e) {
   document.querySelector("aside").classList.toggle("active");
 }
 
-___________________________________________________________________
+______________________________________________________________________________
 
 header js for scroll down 
 
@@ -157,7 +156,7 @@ window.onscroll = function () {
     background-color: #615953d9;
 }
 
-________________________________
+______________________________________________________________________________
 
 slick slider center mode zoom effect 
 
@@ -173,8 +172,7 @@ slick slider center mode zoom effect
     width: 100%;
     transition: all 0.4s ease-in-out;
 }
-_______________________________
-
+______________________________________________________________________________
 inside body border 
 body{
     position: relative;
@@ -183,11 +181,11 @@ body{
 }
 and je section ma na show karavi hoy ama position : relative 
 
-__________________________
+______________________________________________________________________________
 
 btn: hover 
 https://codepen.io/siwuxie/pen/eYoMeLE
-___________
+______________________________________________________________________________
 
 css variable 
 
@@ -203,11 +201,11 @@ css variable
   background-color: var(--white);
   padding: 15px;
 }
-_________
+______________________________________________________________________________
 
 contact-form-7 k koi b form na submit button ma after before use nai thay 
 ana mate bg image j lagavu padse and right padding increase karva nu 
-__________________
+______________________________________________________________________________
 
 popup 
 
@@ -252,8 +250,6 @@ jQuery(document).ready(function() {
 });
 
 
-atyar ni salary 
-+ internship nu apload kari sakay k nai ?
 
 
 
