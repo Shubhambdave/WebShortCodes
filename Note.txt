@@ -1,0 +1,286 @@
+
+#whene we want to show limited line of content 
+.line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
+}
+______________________________________________
+when u dont want to link any page on button
+put this instead of blank href  	
+<a href="javascript:void(0)">BTN</a> 
+______________________________________
+
+#center any content
+{
+	position : ......	
+	top : 50%
+	left: 50%
+	transform: translate(-50%, -50%);
+} 
+______________________________________________________________________________
+
+ Enfold Theme 
+______________________________________________________________________________
+#remove enfold bottom name 
+-add this code to functions.php file in bottom 
+###  add_filter('kriesi_backlink','__return_false'); ###
+________________________________________________
+
+ elementor
+________________________________________________
+
+#container 
+-first full width container 
+-take main container
+[1920----[1600px]----]
+
+#best plugins 
+https://youtu.be/EFpkXMyFReM?feature=shared
+
+#all widget use and full course for elementor 
+https://youtube.com/playlist?list=PL_n5v3BovwmLY1y4nEX6uI2dULa9Uv0Ll&feature=shared
+______________________
+#to break list into two olumn 
+ul {
+column-count-2
+}
+
+or 
+
+ul {
+display: flex
+flex-wrap: wrap
+}
+li{
+width : 50%
+}
+
+#target first and last without using first-child 
+
+a:first-of-type::before
+a:last-of-type::before
+
+#when u need to add icon as background image use this for bg postion 
+background-position: 90px 50%; //this is how u can change bg position manually 
+
+#https://www.cssportal.com/
+this site have everything u want
+
+using bellow site u can generate any colored filter
+https://angel-rs.github.io/css-color-filter-generator/
+
+#scroll-top jquery 
+
+#first:
+  var $backToTop = $(".scroll-btn");
+  $backToTop.hide();
+
+
+  jQuery(window).on('scroll', function () {
+    if (jQuery(this).scrollTop() > 1200) {
+      $backToTop.fadeIn();
+    } else {
+      $backToTop.fadeOut();
+    }
+  });
+
+  $backToTop.on('click', function (e) {
+    jQuery("html, body").animate({ scrollTop: 0 }, 500);
+  });
+
+#second:
+#js for top scrolling button 
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+//You can replace offset value from here
+var offset = 300
+$(window).on('load scroll', function(){
+    
+    if( $(window).scrollTop() > offset ){
+        $('.classname').addClass('show')
+    }else{
+        $('.classname').removeClass('show')
+    }
+})
+</script>
+
+css for it
+
+.classname{
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+classname.show {
+    opacity: 1;
+}
+
+__________________________________________________________
+
+slick slider counter js 
+
+ jQuery('.dining-slider').on('init', function (event, slick) {
+    jQuery(this).append('<div class="slideCount"><span class="current"></span>/<span class="total"></span></div>');
+    jQuery('.current').text(slick.currentSlide + 1);
+    jQuery('.total').text(slick.slideCount);
+  })
+    .slick({
+      arrows: true,
+      fade: true,
+    })
+    .on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+      jQuery('.current').text(nextSlide + 1);
+    });
+});
+
+function toggleMenu(e) {
+  e.classList.toggle("active");
+  document.querySelector("aside").classList.toggle("active");
+}
+
+___________________________________________________________________
+
+header js for scroll down 
+
+window.onscroll = function () {
+  var header = document.querySelector("header");
+  if (window.pageYOffset > 1000) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+};
+
+.sticky {
+    background-color: #615953d9;
+}
+
+________________________________
+
+slick slider center mode zoom effect 
+
+.room-slide.slick-slide{
+    cursor: pointer;
+    transform: scale(0.8);
+}
+.room-slide.slick-center {
+    transform: scale(1.1);
+}
+.room-slide.slick-slide img{
+    height: 100%;
+    width: 100%;
+    transition: all 0.4s ease-in-out;
+}
+_______________________________
+
+inside body border 
+body{
+    position: relative;
+    outline: 2px solid #b39d74;
+    outline-offset: -40px;
+}
+and je section ma na show karavi hoy ama position : relative 
+
+__________________________
+
+btn: hover 
+https://codepen.io/siwuxie/pen/eYoMeLE
+___________
+
+css variable 
+
+1.: declare it like this
+:root {
+  --blue: #1e90ff;
+  --white: #ffffff;
+}
+
+2. This is how u can use it
+.container {
+  color: var(--blue);
+  background-color: var(--white);
+  padding: 15px;
+}
+_________
+
+contact-form-7 k koi b form na submit button ma after before use nai thay 
+ana mate bg image j lagavu padse and right padding increase karva nu 
+__________________
+
+popup 
+
+1.give popup class in section which u want to popup. 
+
+2.css 
+.popup{
+    display: none;
+    position: fixed !important;
+    z-index: 99;
+    left: 50%;
+    top: 50%;
+    width: what u want  !important;
+    height: auto;
+    overflow: auto;
+    background-color: #000000;
+    transition: opacity 0.3s ease;
+    transform: translate(-50%, -50%);
+}
+
+3. give class close to button to close the pop up 
+
+4.Use this jquery to poppup
+jQuery(document).ready(function() {
+    var popupBtn = jQuery("#popup-btn");
+    var popup = jQuery("#popup");
+    var closeBtn = jQuery(".close", popup);
+  
+    popupBtn.click(function() {
+      popup.fadeIn();
+    });
+  
+    closeBtn.click(function() {
+      popup.fadeOut();
+    });
+    
+    jQuery(document).mouseup(function(e) {
+        if (!popup.is(e.target) && popup.has(e.target).length === 0) {
+          popup.fadeOut();
+        }
+      });
+});
+
+
+atyar ni salary 
++ internship nu apload kari sakay k nai ?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
